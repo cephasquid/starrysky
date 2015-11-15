@@ -14,7 +14,7 @@ import starrysky
 try:
     fn = sys.argv[1]
 except:
-    fn = "IMG_1059.jpg"
+    fn = "test.jpg"
 
 
 src = cv2.imread(fn)
@@ -36,7 +36,7 @@ tofollow = findbits.find_good_features(src)
 
 starrysky.create_good_feature_stars(blank_image,tofollow)
 
-cv2.imshow("edges", blank_image)
+cv2.imshow("starry sky", blank_image)
 cv2.waitKey(0)
 
 
